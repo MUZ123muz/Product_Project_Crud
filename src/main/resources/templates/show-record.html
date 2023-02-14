@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:insert="menu"></div>
+
+<table border='1' style='border-collapse:collapse;margin-top:2vw; font-size:1.8vw;width:50%' align='center'cellpadding="10vw">
+<tr>
+<th align="center"> product Id:</th>
+<td th:text="${p.pid}"></td>
+</tr>
+
+<tr>
+<th align="center"> product name:</th>
+<td th:text="${p.name}"></td>
+</tr>
+
+<tr>
+<th align="center"> product brand:</th>
+<td th:text="${p.brand}"></td>
+</tr>
+
+<tr>
+<th align="center"> product quantity:</th>
+<td th:text="${p.quantity}"></td>
+</tr>
+
+<tr>
+<th align="center"> product price:</th>
+<td th:text="${p.price}"></td>
+</tr>
+
+</table>
+
+</body>
+</html>

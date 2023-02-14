@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:insert="menu"></div>
+ <form action="update-record" method="post">
+  <table style='margin-top:2vw;font-size:1.8vw;border:2px solid blue' align='center' cellpadding="10px">
+   <tr>
+    <td>Product id:</td>
+    <td><label th:text="${product.pid}"></label>
+         <input type='hidden' name='pid' th:value='${product.pid}'>
+    </td>
+   </tr>
+   <tr>
+    <td>Edit product name:</td>
+    <td><input type='text' th:value="${product.name}" name='name' required style='font-size:1.7vw'></td>
+   </tr>
+  
+   <tr>
+   <td> product brand </td>
+   <td> <lable th:text="${product.brand}"></lable> </td>
+   </tr>
+   
+  
+     <tr>
+      <td>Select new brand:</td>
+      <td>
+     <select name='brand' id='brand' style='font-size:1.7vw;width:100%'>
+      <option id="Apple">Apple</option>
+      <option id="Samsung">Samsung</option>
+      <option id="OPPO">OPPO</option>
+      <option id="Logitech">Logitech</option>
+      <option id="Acer">Acer</option>
+      <option id="HP">HP</option>
+     </select>
+    </td>
+   </tr>
+   <tr>
+    <td>Edit product quantity:</td>
+    <td><input type='text'  th:value="${product.quantity}" name="quantity" style='font-size:1.7vw'></td>
+   </tr>
+   <tr>
+    <td>Edit product price:</td>
+    <td><input type='text' th:value="${product.price}" name='price' style='font-size:1.7vw' required></td>
+   </tr>
+   <tr>
+    <td colspan="2" align="right">
+     <button style='font-size:1.7vw' >Update Record</button>
+    </td>
+   </tr>
+  </table>
+  </form>
+ </body>
+</html>

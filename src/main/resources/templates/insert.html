@@ -1,0 +1,50 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:insert="menu"></div>
+<form action="save-record" method="post">
+<table style='margin-top:2vw; font-size:1.8vw; border:2px solid blue' align='center'cellpadding="10vw">
+<tr>
+<td>Enter product Id:</td>
+<td><input type='text' name='pid' required style='font-size:1.7vw'></td>
+</tr>
+
+<tr>
+<td>Enter product Name:</td>
+<td><input type='text' name='name' required style='font-size:1.7vw'></td>
+</tr>
+
+<tr>
+<td>Enter product Brand:</td>
+<td>
+<select name='brand' style='font-size:1.7vw; width:100%'>
+ <option >Apple</option>
+      <option >Samsung</option>
+      <option >OPPO</option>
+      <option >Logitech</option>
+      <option >Acer</option>
+      <option >HP</option>
+
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Enter product Quantity:</td>
+<td><input type='number' name='quantity' min='1' value='1'  style='font-size:1.7vw'></td>
+</tr>
+
+<tr>
+<td>Enter product Price:</td>
+<td><input type='text' name='price' required style='font-size:1.7vw'></td>
+</tr>
+
+<tr>
+<td colspan="2" align="right">
+<button style='font-size:1.7vw'>Save Record</button>
+
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:insert="menu"></div>
+<form action="delete-record" method="post">
+<table style='margin-top:2vw; font-size:1.8vw; border:2px solid blue' align='center'cellpadding="10vw">
+<tr>
+<td>Enter product Id:</td>
+<td><input type='text' name='pid' required style='font-size:1.7vw'></td>
+</tr>
+
+
+<tr>
+<td colspan="2" align="right">
+<button style='font-size:1.7vw'>delete Record</button>
+
+</td>
+</tr>
+</table>
+<div style='text-align: center'>
+
+<h4 style='color:red' th:text="${msg}"></h4>
+
+</div>
+
+</form>
+</body>
+</html>
